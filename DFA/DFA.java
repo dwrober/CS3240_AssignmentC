@@ -11,7 +11,7 @@ import java.util.Map;
  * Note that unspecified cases have undefined results.
  * 
  * @author David Robertson - built according to http://jodypaul.com/cs/theory/DFAjava/DFA.html>required api
- * @version 1.0.0
+ * @version 1.0.2 - (https://github.com/dwrober/CS3240_AssignmentC/tree/1.0.2)
  */
 public class DFA extends Object
 {
