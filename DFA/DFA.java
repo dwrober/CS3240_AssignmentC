@@ -48,12 +48,16 @@ public class DFA extends Object
     }
     
     /**
-     * Determines whether given string is accepted or rejected by this DFA. Each state's activity couner is initialized to zero, then incremented by one each time the state is entered.
+     * Determines whether given string is accepted or rejected by this DFA. Each state's activity counter is initialized to zero, then incremented by one each time the state is entered.
      * @param input the input string; allows both "" and null to indicate the empty string ε
      * @return true if the string is in the language recognized by this DFA; false otherwise
      */
     public boolean accepts(String input)
     {
+        if(input == null || input.length() == 0)
+        {
+            return true;
+        }
         return false;
     }
     
