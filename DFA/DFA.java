@@ -83,7 +83,6 @@ public class DFA extends Object
 
             if(acceptStates.contains(currentState)==true)
             {
-                //currentState.increment();
                 return true;
             }
             else
