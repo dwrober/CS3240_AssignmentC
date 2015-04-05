@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=name\ label
+comment0.target=State(java.lang.String,\ java.lang.String)
+comment0.text=\n\ Constructs\ a\ state\ with\ the\ specified\ name\ and\ label.\n\ The\ activity\ counter\ is\ set\ to\ zero.\n\ @param\ name\ the\ name\ for\ this\ state\n\ @param\ label\ the\ label\ for\ this\ state\n
+comment1.params=
+comment1.target=java.lang.String\ name()
+comment1.text=\n\ Retrieves\ the\ name\ of\ this\ state.\n\ @return\ the\ name\ of\ this\ state\n
+comment2.params=
+comment2.target=java.lang.String\ label()
+comment2.text=\n\ Retrieves\ the\ label\ of\ this\ state.\n\ @return\ the\ label\ of\ this\ state\n
+comment3.params=
+comment3.target=long\ counter()
+comment3.text=\n\ Retrieves\ the\ activity\ counter\ of\ this\ state.\n\ @return\ the\ current\ counter\ value\n
+comment4.params=
+comment4.target=void\ increment()
+comment4.text=\n\ Increments\ the\ activity\ counter\ of\ this\ state.\n
+comment5.params=
+comment5.target=void\ reset()
+comment5.text=\n\ Resets\ the\ activity\ counter\ of\ this\ state\ to\ 0.\n
+numComments=6
