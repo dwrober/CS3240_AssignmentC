@@ -58,7 +58,27 @@ public class DFA extends Object
         {
             return true;
         }
-        return false;
+        else {
+            State currentState = initialState();
+            Map<State,Map<String,State>> transition = transitionFunction();
+            Set<State> acceptStates = acceptStates();
+            
+            currentState.increment();
+            
+            for(int i = 0; i < input.length(); i++)
+            {
+                if(transition.get(currentState).get(String.valueOf(input.charAt(i)))==null)
+                {
+                    return false;
+                }
+                else 
+                {
+                    currentState = nextState(currentState, String.valueOf(input.charAt(i)));
+                }        
+            }
+            return acceptStates.contains(currentState);
+        }
+        
     }
     
     /**
@@ -67,7 +87,7 @@ public class DFA extends Object
      */
     public Set<State> acceptStates()
     {
-        return null;
+        return accept;
     }
 
     /**
@@ -76,7 +96,7 @@ public class DFA extends Object
      */
     public Set<String> alphabet()
     {
-        return null;
+        return alphabet;
     }
     
     /**
@@ -85,7 +105,13 @@ public class DFA extends Object
      */
     public State initialState()
     {
-        return null;
+        if(start != null) 
+        {
+            return start;
+        }
+        else {
+            return null;
+        }
     }
     
     /**
@@ -96,7 +122,7 @@ public class DFA extends Object
      */
     public State nextState(State source, String input)
     {
-        return null;
+        return transitionFunction().get(source).get(input);
     }
     
     /**
@@ -105,7 +131,7 @@ public class DFA extends Object
      */
     public Set<State> states()
     {
-        return null;
+        return states;
     }
     
     /**
@@ -114,6 +140,6 @@ public class DFA extends Object
      */
     public Map<State,Map<String,State>> transitionFunction()
     {
-        return null;
+        return transition;
     }
 }
