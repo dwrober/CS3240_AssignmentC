@@ -157,7 +157,10 @@ public class DFA extends Object
     }
     
     
-    
+    /**
+     * Resets states when a new string is called
+     * @return void
+     */
     private void resetStates() 
     {
         Set<State> states = states();
