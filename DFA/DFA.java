@@ -54,29 +54,43 @@ public class DFA extends Object
      */
     public boolean accepts(String input)
     {
+        resetStates();
+        State currentState = initialState();
+        Map<State,Map<String,State>> transition = transitionFunction();
+        Set<State> acceptStates = acceptStates();
+        
         if(input == null || input.length() == 0)
         {
             return true;
         }
+
         else {
-            State currentState = initialState();
-            Map<State,Map<String,State>> transition = transitionFunction();
-            Set<State> acceptStates = acceptStates();
-            
             currentState.increment();
-            
             for(int i = 0; i < input.length(); i++)
-            {
-                if(transition.get(currentState).get(String.valueOf(input.charAt(i)))==null)
-                {
-                    return false;
+            {      
+                String currentString = String.valueOf(input.charAt(i));
+                currentState = nextState(currentState, currentString);
+                if(currentState!=null)
+                {   
+                    currentState.increment();                    
                 }
                 else 
                 {
-                    currentState = nextState(currentState, String.valueOf(input.charAt(i)));
-                }        
+                    return false;
+                }
+
             }
-            return acceptStates.contains(currentState);
+
+            if(acceptStates.contains(currentState)==true)
+            {
+                //currentState.increment();
+                return true;
+            }
+            else
+            {   
+                return false;
+            }
+
         }
         
     }
@@ -141,5 +155,16 @@ public class DFA extends Object
     public Map<State,Map<String,State>> transitionFunction()
     {
         return transition;
+    }
+    
+    
+    
+    private void resetStates() 
+    {
+        Set<State> states = states();
+        
+        for(State state : states){
+            state.reset();
+        }
     }
 }

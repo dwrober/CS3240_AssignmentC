@@ -82,6 +82,10 @@ public class DFATest {
         trans.put("b", q2);
         transitions.put(q2, trans);
         DFA dfa = new DFA(states, alphabet, transitions, initial, accept);
+        assertTrue(dfa.accepts(""));
+        assertEquals(0L, q0.counter());
+        assertEquals(0L, q1.counter());
+        assertEquals(0L, q2.counter());
         assertTrue(dfa.accepts("b"));
         assertEquals(1L, q0.counter());
         assertEquals(1L, q1.counter());
