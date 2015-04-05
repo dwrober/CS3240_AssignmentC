@@ -1,8 +1,9 @@
 #BlueJ class context
-comment0.params=
-comment0.target=DFA()
-comment0.text=\n\ Constructor\ for\ objects\ of\ class\ DFA\n
-comment1.params=y
-comment1.target=int\ sampleMethod(int)
-comment1.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \n
-numComments=2
+comment0.params=states\ alphabet\ transition\ start\ accept
+comment0.target=DFA(java.util.Set,\ java.util.Set,\ java.util.Map,\ State,\ java.util.Set)
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ DFA\n\ @param\ states\n\ @param\ alphabet\n\ @param\ transition\n\ @param\ start\n\ @param\ accept\n
+comment1.params=input
+comment1.target=boolean\ accepts(java.lang.String)
+comment2.params=
+comment2.target=java.util.Set\ acceptStates()
+numComments=3

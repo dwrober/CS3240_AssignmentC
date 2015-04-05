@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ astarDFATest()
+comment0.text=\n\ Constructs\ and\ tests\ a\ string\ validator\ for\n\ regular\ expression\ a*\ over\ the\ alphabet\ {a,\ b}.\n
+comment1.params=
+comment1.target=void\ astar_bDFATest()
+comment1.text=\n\ Constructs\ and\ tests\ a\ string\ validator\ for\n\ regular\ expression\ a*b.\n\ Includes\ tests\ of\ state\ activity\ counter.\n
+comment2.params=
+comment2.target=void\ astar_c_abstar_c_cstarDFATest()
+comment2.text=\n\ Construct\ and\ test\ a\ string\ validator\ for\n\ regular\ expression\ a*c(ab)*cc*.\n\n
+comment3.params=
+comment3.target=void\ assignmentStatementDFATest()
+comment3.text=\n\ Construct\ and\ test\ a\ simple\ assignment\ statement\ checker.\n\ All\ variables\ are\ a\ single\ lower-case\ letter.\n\ Expression\ operators\ are\ +,\ -,\ *,\ and\ /.\n\ Assignment\ operator\ is\ \=.\n\ Blanks\ are\ not\ in\ the\ alphabet.\n\ The\ assignment\ statement\ must\ end\ with\ ;\ (a\ semi-colon).\n
+comment4.params=regexp\ input
+comment4.target=boolean\ regexMatch(java.lang.String,\ java.lang.String)
+comment4.text=\n\ Determines\ if\ java.util.regex\ identifies\ the\ entire\n\ input\ string\ as\ matching\ the\ given\ regular\ expression.\n\ @param\ regexp\ the\ regular\ expression\n\ @param\ input\ the\ input\ string\n\ @return\ true\ if\ the\ entire\ input\ string\ is\ matched\ by\ the\ pattern;\n\ \ \ \ \ \ \ \ \ false\ otherwise\n
+comment5.params=
+comment5.target=void\ utilregexTests()
+comment5.text=\n\ Tests\ using\ java.util.regex\ for\ comparison.\n\ The\ RE\ <code>[a-z][0-9]+</code>\ represents\n\ identifiers\ that\ start\ with\ a\ single\n\ lower-case\ letter\ which\ is\ then\ followed\ by\n\ one\ or\ more\ numerals\ (e.g.,\ a0\ and\ d4298\ but\n\ not\ ab1\ or\ 0a).\n
+numComments=6
